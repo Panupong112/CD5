@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    min-height: 100vh;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 20px;
+    font-family: sans-serif;
+    background-color: #ffe6f2; /* สีพื้นหลังชมพูอ่อน */
+}
+
+.header, .footer, .content1, .content2 > div > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #ff99cc; /* สีขอบชมพูเข้ม */
+    text-align: center;
+    padding: 10px;
+    background-color: #ffd6e7; /* สีพื้นหลังของคอนเทนเนอร์ */
+    color: #800040; /* สีข้อความชมพูเข้ม */
+}
+
+.header, .footer {
+    background-color: #ffb3d9; /* สีพื้นหลังของ header และ footer */
+}
+
+.main-container {
+    flex: 6;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.content1 {
+    flex: 3;
+    min-height: 400px;
+}
+
+.content2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.content2 > div {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.content1 img, .content2 img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px; /* เพิ่มความโค้งมนให้กับรูปภาพ */
+}
+
+@media screen and (max-width: 800px) {
+    .main-container {
+        flex-wrap: wrap;
+    }
+
+    .content1 {
+        flex: 100%;
+    }
+    
+    .header {
+        min-height: 90px;
+        background-color: #ff99cc; /* สี header ในหน้าจอขนาดเล็ก */
+    }
+
+    .footer {
+        min-height: 110px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .content2 > div {
+        flex-direction: column;
+    }
+
+    .content2 > div > div {
+        min-height: 200px;
+    }
+}
+
